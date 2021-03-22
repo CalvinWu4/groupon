@@ -16,3 +16,5 @@ require('whatwg-fetch');
 if (process.env.NODE_ENV === 'test') {
   require('raf').polyfill(global);
 }
+
+require('arrive');
