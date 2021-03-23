@@ -10,6 +10,7 @@
   "content_scripts" : [
     {
       "matches": [ 
+        "https://api.groupon.com/v2/deals*",
         "*://www.google.com/maps/search/*",
         "*://www.google.ad/maps/search/*",
         "*://www.google.ae/maps/search/*",

@@ -28,7 +28,14 @@ document.arrive('.place-result-container-place-link', function() {
 });
 
 function extractDataforSearch(item) {
-  console.log(`${item.getAttribute('aria-label')}: ${item.href.match(latRegex)[1]}, ${item.href.match(longRegex)[1]}`);
+  const merchant = item.getAttribute('aria-label');
+  const lat = item.href.match(latRegex)[1];
+  const lng = item.href.match(longRegex)[1];
+  chrome.runtime.sendMessage({ merchant: merchant, latitude: lat, longitude: lng }, async function (response) {
+    console.log(response);
+  });
+
+  // console.log(`${item.getAttribute('aria-label')}: ${item.href.match(latRegex)[1]}, ${item.href.match(longRegex)[1]}`);
 }
 // class Main extends React.Component {
 //     render() {
