@@ -206,5 +206,10 @@
   "web_accessible_resources":[
     "/static/css/content.css", "/static/media/*"
   ],
+  "icons": {
+    "16":"/static/media/favicon-16x16.png",
+    "48":"/static/media/favicon-48x48.png",
+    "128":"/static/media/favicon-128x128.png" 
+  },
   "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
 }
